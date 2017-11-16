@@ -1,16 +1,26 @@
 import React from 'react';
 
-class Poke extends React.Component {
+class PokemonIndex extends React.Component {
   constructor(props) {
     super(props);
 
   }
 
+  componentDidMount() {
+    this.props.requestAllPokemon();
+  }
+
   render() {
+    console.log(this.props);
     return (
-      <p>We rendered!</p>
+      <ul>
+        {this.props.pokemon.map(el =>
+          <li><h1>{el.name}</h1>
+          <img src={el.image_url}></img></li>
+        )}
+      </ul>
     );
   }
 }
 
-export default Poke;
+export default PokemonIndex;

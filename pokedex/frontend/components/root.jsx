@@ -1,10 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Poke from './pokemon/pokemon_index';
+import PokemonIndexContainer from './pokemon/pokemon_index_container'; //we can name it anything, convention to call it container
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <div><Poke /></div>
+    <div><PokemonIndexContainer /></div>
   </Provider>
 );
 
